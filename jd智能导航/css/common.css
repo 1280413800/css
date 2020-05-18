@@ -1,0 +1,291 @@
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.none {
+    display: none;
+}
+
+.red {
+    color: #c81623;
+}
+
+.shortcut {
+    height: 31px;
+    line-height: 31px;
+    background-color: #f1f1f1;
+}
+
+.shortcut_nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shortcut_nav_left {
+    display: flex;
+}
+
+.shortcut_nav_right ul {
+    display: flex;
+}
+
+.shortcut_nav_right span {
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #ccc;
+    margin: 9px 14px;
+}
+
+.icon_down {
+    /* display: inline-block;
+    margin-left: 2px;
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #666;
+    border-right: 1px solid #666;
+    transform: translateY(-50%) rotate(135deg); */
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border: 1px;
+}
+
+.header {
+    position: relative;
+    height: 105px;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 175px;
+}
+
+.logo a {
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    font-size: 0;
+    background: url(../images/logo1.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.header_search input {
+    position: absolute;
+    top: 25px;
+    left: 348px;
+    width: 454px;
+    height: 32px;
+    border: 2px solid #b1191a;
+    padding-left: 10px;
+    color: #989898;
+    font-size: 12px;
+}
+
+.header_search .search_btn {
+    position: absolute;
+    top: 25px;
+    left: 816px;
+    width: 82px;
+    height: 36px;
+    background-color: #b1191a;
+    border: 2px solid #b1191a;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+}
+
+.hotwrods {
+    position: absolute;
+    top: 70px;
+    left: 348px;
+}
+
+.hotwrods a {
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.shop_car {
+    position: absolute;
+    top: 25px;
+    left: 997px;
+    width: 138px;
+    height: 34px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    text-align: center;
+    line-height: 34px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.shop_car:hover {
+    color: #e33333;
+}
+
+.shop_car_count {
+    position: absolute;
+    top: -7px;
+    left: 100px;
+    height: 14px;
+    background-color: #e60012;
+    line-height: 14px;
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 7px 7px 6px 0;
+}
+
+.nav {
+    height: 46px;
+    border-bottom: 2px solid #B1191A;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown_dt {
+    width: 209px;
+    height: 48px;
+    background-color: #b1191a;
+    font-size: 16px;
+    font-weight: 400;
+    color: #f1dfdf;
+    text-align: center;
+    line-height: 45px;
+}
+
+.dropdown_dd {
+    height: 465px;
+    width: 209px;
+    background-color: #c81623;
+    position: absolute;
+    top: 48px;
+    left: 0;
+}
+
+.nav_items {
+    margin-left: 10px;
+}
+
+.nav_items li {
+    float: left;
+}
+
+.nav_items li a {
+    padding: 0 27px;
+    font-size: 14px;
+    line-height: 48px;
+}
+
+
+/* footer 部分 */
+
+.footer {
+    height: 386px;
+    background-color: #f5f5f5;
+    padding-top: 30px;
+}
+
+.store_service {
+    height: 109px;
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto;
+}
+
+.store_service li {
+    float: left;
+    width: 240px;
+    height: 79px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.store_service_icon {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
+    background: url(../images/icons.png) no-repeat;
+}
+
+.store_service_title {
+    float: left;
+    margin-left: 5px;
+}
+
+.store_service_zheng {
+    background-position: -253px -3px;
+}
+
+.store_service_kuai {
+    background-position: -255px -54px;
+}
+
+.store_service_bao {
+    background-position: -257px -105px;
+}
+
+.store_service_te {
+    background-position: -257px -156px;
+}
+
+.store_service_bang {
+    background-position: -257px -208px;
+}
+
+.store_help {
+    height: 187px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.store_help_item {
+    padding: 20px 0 0 50px;
+}
+
+.store_help_item dt {
+    height: 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.store_help_item dd {
+    height: 22px;
+}
+
+.store_help_app dt,
+.store_help_app p {
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright_links {
+    margin: 15px 0 5px 0;
+}
+
+.copyright_info {
+    line-height: 20px;
+}

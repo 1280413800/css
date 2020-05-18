@@ -1,0 +1,195 @@
+/* 简单方法的 rem 自适应 */
+
+@media (min-width: 560px) {
+    /* 适应宽屏ipad */
+    html {
+        font-size: 54px;
+    }
+}
+
+html {
+    font-size: calc(100vw / 3.75);
+    box-sizing: border-box;
+}
+
+body {
+    /* max-width: 540px;
+    min-width: 320px; */
+    font-size: 14px;
+    /* font-family: PingFangSC-Regular, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, miui; */
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: 400
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: 400
+}
+
+input {
+    outline: none;
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+textarea {
+    resize: none
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+    -moz-user-select: none;
+}
+
+.bold {
+    font-weight: 700
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.radius {
+    border-radius: 100%
+}
+
+.positionCenterLeft {
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+.positionCenterTop {
+    top: 0;
+    bottom: 0;
+    margin: auto
+}
+
+.positionCenter {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+.distable {
+    display: table
+}
+
+.distablecell {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.textels {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.marginCenter {
+    margin: 0 auto
+}
+
+.t_l {
+    text-align: left
+}
+
+.t_c {
+    text-align: center
+}
+
+.t_r {
+    text-align: right
+}
+
+.unLine {
+    text-decoration: underline
+}
+
+.fixed {
+    position: fixed
+}
+
+.absolute {
+    position: absolute
+}
+
+.relative {
+    position: relative
+}
+
+.wrapper {
+    clear: both;
+    overflow: hidden
+}
+
+.o-hidden {
+    overflow: hidden
+}
+
+.hidden {
+    display: none
+}
+
+.block {
+    display: block
+}
+
+.lblock {
+    display: inline-block
+}
+
+.clear {
+    clear: both
+}
+
+.pointer {
+    cursor: pointer
+}
+
+img {
+    border: 0;
+    vertical-align: middle
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/rolldate.min.js"></script>
+    <style>
+        input {
+            display: block;
+            box-sizing: border-box;
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid #ccc;
+            width: 200px;
+            height: 30px;
+            margin: 20px auto;
+            padding-right: 10px;
+            text-align: left;
+            padding-left: 10px;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <input readonly type="text" id="date" placeholder="请选择时间" />
+    <script>
+        window.onload = function() {
+            new Rolldate({
+                el: "#date",
+                format: "YYYY-MM-DD",
+                beginYear: 2000,
+                endYear: 2100,
+                theme: "blue",
+            });
+        }
+    </script>
+</body>
+
+</html>

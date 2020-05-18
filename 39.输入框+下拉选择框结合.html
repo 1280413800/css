@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            box-sizing: border-box;
+            width: 200px;
+            line-height: 30px;
+            border-radius: 15px;
+            padding: 0 15px;
+            outline: none;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+    <label>喜欢的热播电视剧</label>
+    <input name="teleplay" list="teleplay_list">
+    <datalist id="teleplay_list">
+        <option value="权利的游戏"></option>
+        <option value="白夜追凶"></option>
+        <option value="白神探狄仁杰"></option>
+        <option value="甜蜜暴击"></option>
+        <option value="上海堡垒"></option>
+    </datalist>
+    <div id="tips"></div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script>
+        $("input[name=teleplay]").change(function() {
+            $('#tips').html('你喜欢看得是:' + $(this).val())
+        })
+    </script>
+</body>
+
+</html>

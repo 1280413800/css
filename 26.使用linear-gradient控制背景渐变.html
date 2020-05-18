@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .gradient-bg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background: linear-gradient(135deg, red, orange, green, blue, purple) left center / 400% 400%;
+            font-weight: bold;
+            font-size: 100px;
+            color: #fff;
+            animation: move 10s infinite;
+        }
+        
+        @keyframes move {
+            0%,
+            100% {
+                background-position-x: right;
+            }
+            50% {
+                background-position-x: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bruce">
+        <div class="gradient-bg">iCSS</div>
+    </div>
+</body>
+
+</html>

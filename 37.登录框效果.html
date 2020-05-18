@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <style>
+        html {
+            overflow: hidden;
+        }
+        
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background-image: url(./images/0142d85dde4388a80120686b28d43c.jpg@1280w_1l_2o_100sh.jpg);
+            background-repeat: repeat-y;
+            background-position: center;
+            overflow: hidden;
+        }
+        
+        .login_box {
+            width: 90%;
+            margin: 1rem auto;
+            padding: .3rem .2rem;
+            position: relative;
+            background-color: rgba(255, 255, 255, .7);
+            border-radius: .1rem;
+            overflow: hidden;
+        }
+        
+        .login_tit {
+            width: 100%;
+            line-height: .4rem;
+            font-size: .26rem;
+            font-weight: 700;
+            color: #ED2553;
+            letter-spacing: 2px;
+            position: relative;
+        }
+        
+        .login_tit::before {
+            content: "";
+            width: .05rem;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -.2rem;
+            background-color: #ed2553;
+        }
+        
+        .login_input,
+        .login_input label,
+        .login_input input,
+        .login_input .login_line {
+            transition: 300ms cubic-bezier(.4, 0, .2, 1);
+        }
+        
+        .login_input,
+        .login_input label,
+        .login_input input,
+        .login_input .login_line {
+            width: 100%;
+            float: left;
+        }
+        
+        .login_input {
+            margin-top: .1rem;
+            height: .7rem;
+        }
+        
+        .login_input,
+        .login_input input {
+            position: relative;
+        }
+        
+        .login_input label {
+            position: absolute;
+            top: .1rem;
+            left: 0;
+            z-index: 2;
+            line-height: .6rem;
+        }
+        
+        .login_input input,
+        .login_input label {
+            font-size: .22rem;
+            color: #333
+        }
+        
+        .login_input input {
+            height: .6rem;
+            top: .1rem;
+            border: none;
+            background: transparent;
+        }
+        
+        .login_input::before,
+        .login_input .login_line {
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .login_input::before {
+            content: "";
+            background: rgba(0, 0, 0, .1);
+            z-index: 3;
+        }
+        
+        .login_input .login_line {
+            background: #ED2553;
+            z-index: 4;
+            width: 0;
+        }
+        
+        .login_btn button {
+            width: 60%;
+            margin: .2rem auto;
+            text-align: center;
+            line-height: .6rem;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: transparent;
+            border: 2px solid rgba(0, 0, 0, .1);
+            font-size: .18rem;
+            color: rgba(0, 0, 0, .5);
+            outline: none;
+        }
+        
+        .pass_forgot {
+            width: 100%;
+            float: left;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.4);
+            font-size: .18rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login_box">
+            <div class="login_tit">登录</div>
+            <div class="login_input">
+                <label for="name">用户名</label>
+                <input type="text" name="name" id="name">
+                <span class="login_line"></span>
+            </div>
+            <div class="login_input">
+                <label for="pass">密码</label>
+                <input type="password" name="pass" id="pass">
+                <span class="login_line"></span>
+            </div>
+            <div class="login_btn">
+                <button>登录</button>
+            </div>
+            <a href="javascript:" class="pass_forgot">忘记密码？</a>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(".login_input input").focus(function() {
+                $(this).parent(".login_input").each(function() {
+                    $("label", this).css({
+                        "line-height": ".18rem",
+                        "font-size": ".18rem",
+                        "top": "0",
+                        "color": "#999"
+                    })
+                    $(".login_line", this).css({
+                        "width": "100%"
+                    })
+                })
+            }).blur(function() {
+                $(".login_line").css({
+                    "width": "0rem"
+                })
+                if ($(this).val() == "") {
+                    $(this).parent(".login_input").each(function() {
+                        $("label", this).css({
+                            "line-height": ".6rem",
+                            "font-size": ".22rem",
+                            "top": ".1rem",
+                            "color": "#333"
+                        })
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

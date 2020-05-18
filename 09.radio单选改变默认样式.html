@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .beauty-selection {
+            display: flex;
+        }
+        
+        .beauty-selection li {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        
+        .beauty-selection li:first-child {
+            margin-left: 0;
+        }
+        
+        input:checked+label {
+            background-color: orange;
+        }
+        
+        label {
+            margin-right: 5px;
+            padding: 2px;
+            border: 1px solid orange;
+            border-radius: 100%;
+            width: 8px;
+            height: 8px;
+            background-clip: content-box;
+            cursor: pointer;
+            transition: all 300ms;
+        }
+        
+        span {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bruce flex-ct-x">
+        <ul class="beauty-selection">
+            <li>
+                <input type="radio" name="radioName" id="fed-engineer" hidden>
+                <label for="fed-engineer"></label>
+                <span>阿里巴巴</span>
+            </li>
+            <li>
+                <input type="radio" name="radioName" id="bed-engineer" hidden>
+                <label for="bed-engineer"></label>
+                <span>腾讯</span>
+            </li>
+            <li>
+                <input type="radio" name="radioName" id="fsd-engineer" hidden>
+                <label for="fsd-engineer"></label>
+                <span>百度</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <style>
+        .wrap {
+            position: relative;
+            width: 200px;
+            left: 50px;
+            top: 50px;
+            background: #6c6669;
+            padding: 15px 0;
+        }
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            border-right-width: 0;
+        }
+        
+        li {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            position: relative;
+        }
+        
+        li.active {
+            background: #999395;
+        }
+        
+        li span:hover {
+            color: #c81623;
+        }
+        
+        .none {
+            display: none;
+        }
+        
+        #sub {
+            width: 600px;
+            min-height: 270px;
+            position: absolute;
+            border: 1px solid #f7f7f7;
+            background: #f7f7f7;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+            left: 200px;
+            top: 0;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 10px;
+        }
+        
+        .sub_content a {
+            text-decoration: none;
+            color: #666;
+            font-size: 12px;
+        }
+        
+        .sub_content dd a {
+            border-left: 1px solid #e0e0e0;
+            padding: 0 10px;
+            margin: 4px 0;
+        }
+        
+        .sub_content dl {
+            overflow: hidden;
+        }
+        
+        .sub_content dt {
+            float: left;
+            width: 70px;
+            clear: left;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        .sub_content dd {
+            float: left;
+            margin-left: 5px;
+            border-top: 1px solid #eee;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap" id="wrap">
+        <ul>
+            <li data-id="a">
+                <span> 一级导航1 </span>
+            </li>
+            <li data-id="b">
+                <span> 一级导航2 </span>
+            </li>
+            <li data-id="c">
+                <span> 一级导航3 </span>
+            </li>
+            <li data-id="d">
+                <span> 一级导航4 </span>
+            </li>
+            <li data-id="e">
+                <span> 一级导航5 </span>
+            </li>
+            <li data-id="f">
+                <span> 一级导航6 </span>
+            </li>
+        </ul>
+        <div id="sub" class="none">
+            <div id="a" class="sub_content none">
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单1 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单1 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单1 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+            </div>
+            <div id="b" class="sub_content none">
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单2 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单2 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单2 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单2 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单2 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单2 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+            </div>
+            <div id="c" class="sub_content none">
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单3 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单3 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单3 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+            </div>
+            <div id="d" class="sub_content none">
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单4 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单4 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单4 </a> 
+                        </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单4 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+            </div>
+            <div id="e" class="sub_content none">
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单5 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单5 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+            </div>
+            <div id="f" class="sub_content none">
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单6 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单6 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单6 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单6 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="#"> 二级菜单6 </a>
+                    </dt>
+                    <dd>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                        <a href="#"> 三级菜单 </a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var sub = $("#sub");
+            var activeRow, //  已激活的一级菜单
+                activeMenu; //  已激活的子级菜单
+            var timer;
+            // 鼠标是否在子菜单里
+            var mouseInSub = false;
+            sub.on("mouseenter", function() {
+                    mouseInSub = true;
+                })
+                .on("mouseleave", function() {
+                    mouseInSub = false;
+                });
+            // 记录鼠标的位置
+            var mouseTrack = [];
+            var moveHandler = function(e) {
+                mouseTrack.push({
+                    x: e.pageX,
+                    y: e.pageY
+                });
+                // 只需要当前点和上一个点
+                if (mouseTrack.length > 3) {
+                    mouseTrack.shift();
+                }
+            };
+            // 此处只能给整个菜单注册，而非只给一级菜单加，否则timer中的回调执行时，activeRow已为空
+            $("#wrap").on("mouseenter", function() {
+                    sub.removeClass("none");
+                    $(document).bind("mousemove", moveHandler); // 用于记录鼠标位置
+                })
+                .on("mouseleave", function() {
+                    sub.addClass("none");
+                    if (activeRow) {
+                        activeRow.removeClass("active");
+                        activeRow = null;
+                    }
+                    if (activeMenu) {
+                        activeMenu.addClass("none");
+                        activeMenu = null;
+                    }
+                    $(document).unbind("mousemove", moveHandler); // 注意解绑，以免影响其他组件
+                })
+                .on("mouseenter", "li", function(e) {
+                    if (!activeRow) {
+                        active(e.target);
+                        return;
+                    }
+                    if (timer) {
+                        clearTimeout(timer);
+                    }
+                    var curMouse = mouseTrack[mouseTrack.length - 1]; // 鼠标当前坐标
+                    var prevMouse = mouseTrack[mouseTrack.length - 2]; // 鼠标上一次坐标
+                    // console.log(curMouse, prevMouse);
+                    var delay = needDelay(sub, curMouse, prevMouse);
+                    if (delay) {
+                        // 加入延迟器，解决斜方移动切换，只能折线移动的问题
+                        timer = setTimeout(function() {
+                            if (mouseInSub) {
+                                return;
+                            }
+                            activeRow.removeClass("active");
+                            activeMenu.addClass("none");
+                            active(e.target);
+
+                            timer = null;
+                        }, 300);
+                    } else {
+                        activeRow.removeClass("active");
+                        activeMenu.addClass("none");
+                        active(e.target);
+                    }
+                });
+
+            function active(target) {
+                activeRow = $(target);
+                activeRow.addClass("active");
+                activeMenu = $("#" + activeRow.data("id"));
+                activeMenu.removeClass("none");
+            }
+        });
+        // 向量是终点坐标减去起点坐标
+        function vector(a, b) {
+            return {
+                x: b.x - a.x,
+                y: b.y - a.y
+            };
+        }
+        // 向量的叉乘
+        function vectorPro(v1, v2) {
+            return v1.x * v2.y - v1.y * v2.x;
+        }
+        // 用位运算高效判断符号相同
+        function sameSign(a, b) {
+            return (a ^ b) >= 0;
+        }
+        // 判断点是否在三角形内
+        function isPointInTranjgle(p, a, b, c) {
+            var pa = vector(p, a);
+            var pb = vector(p, b);
+            var pc = vector(p, c);
+            var t1 = vectorPro(pa, pb);
+            var t2 = vectorPro(pb, pc);
+            var t3 = vectorPro(pc, pa);
+            return sameSign(t1, t2) && sameSign(t2, t3);
+        }
+        // 是否需要延迟
+        function needDelay(ele, curMouse, prevMouse) {
+            if (!curMouse || !prevMouse) {
+                return;
+            }
+            var offset = ele.offset();
+            // 左上点
+            var topleft = {
+                x: offset.left,
+                y: offset.top
+            };
+            // 左下点
+            var leftbottom = {
+                x: offset.left,
+                y: offset.top + ele.height()
+            };
+            return isPointInTranjgle(curMouse, prevMouse, topleft, leftbottom);
+        }
+    </script>
+</body>
+
+</html>

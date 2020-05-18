@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .text-box {
+            border: 1px solid red;
+            /* 一行 显示省略号 */
+            width: 200px;
+            /* 规定文本是否折行 */
+            white-space: nowrap;
+            /* 规定超出内容宽度的元素隐藏 */
+            overflow: hidden;
+            /* 规定超出的内容文本省略号显示，通常跟上面的属性连用，因为没有上面的属性不会触发超出规定的内容 */
+            text-overflow: ellipsis;
+        }
+        
+        .text-box2 {
+            /* 多行 */
+            width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            /* 将对象作为弹性伸缩盒子模型显示 */
+            -webkit-line-clamp: 2;
+            /* 控制最多显示几行 */
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-box">
+        文本省略号是非常常见的需求，而省略号展示又通常分为俩种情况折行和不折行。
+    </div>
+    <div class="text-box2" style="margin-top: 20px;">
+        文本省略号是非常常见的需求，而省略号展示又通常分为俩种情况折行和不折行。
+    </div>
+</body>
+
+</html>

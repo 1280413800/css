@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-color: #323436;
+        }
+        
+        .inner {
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .inner h1 {
+            float: left;
+        }
+        
+        .inner h1 img {
+            display: block;
+            border: 0;
+        }
+        
+        .nav {
+            float: right;
+            list-style: none;
+            font-family: "Microsoft Yahei";
+        }
+        
+        .nav li {
+            float: left;
+            margin-left: 5px;
+        }
+        
+        .nav a {
+            float: left;
+            color: #cecece;
+            text-decoration: none;
+        }
+        
+        .nav a:hover {
+            background-color: #555;
+        }
+        
+        .large .inner {
+            padding: 20px 0;
+        }
+        
+        .large h1 img {
+            height: 64px;
+        }
+        
+        .large .nav {
+            padding-top: 10px;
+        }
+        
+        .large .nav a {
+            height: 44px;
+            padding: 0 20px;
+            line-height: 44px;
+            font-size: 18px;
+        }
+        
+        .small .inner {
+            padding: 10px 0;
+        }
+        
+        .small h1 img {
+            height: 34px;
+        }
+        
+        .small .nav {
+            padding-top: 3px;
+        }
+        
+        .small .nav a {
+            height: 28px;
+            padding: 0 10px;
+            line-height: 28px;
+            font-size: 14px;
+        }
+        
+        .header,
+        .header .inner,
+        .header a,
+        .header img,
+        .header li {
+            transition: all 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header large">
+        <div class="inner">
+            <h1>
+                <a href="#">
+                    <img src="http://cdn.dowebok.com/138/images/logo.png">
+                </a>
+            </h1>
+            <ul class="nav">
+                <li><a href="#" class="cur" title="首页">首页</a></li>
+                <li><a href="#" class="cur" title="代码">代码</a></li>
+                <li><a href="#" class="cur" title="素材">素材</a></li>
+                <li><a href="#" class="cur" title="模板">模板</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="section" style="height: 1000px;">
+        <p style="margin-top: 300px;text-align: center;color: #f50;">
+            滑动查看效果
+        </p>
+    </div>
+
+
+
+    <script>
+        $(function() {
+            $(window).on('scroll', function() {
+                if ($(window).scrollTop() > 100) {
+                    $('.header').removeClass('large').addClass('small')
+                } else {
+                    $('.header').removeClass('small').addClass('large')
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        img {
+            border-style: none;
+        }
+        
+        html,
+        body,
+        #app {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #app {
+            min-width: 1280px;
+            height: 100%;
+            font-size: 14px;
+            color: #1c242c;
+        }
+        
+        .home-container {
+            position: relative;
+            background-image: url('./img/mbg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 1280px;
+        }
+        
+        .home-login {
+            margin: 16px 0 0 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .flex-y-layout {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+        
+        .feature {
+            margin-top: 200px;
+        }
+        
+        .flex-center {
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .feature h1 {
+            font-size: 34px;
+            color: #00ffff;
+            font-weight: 700;
+        }
+        
+        .feature h2 {
+            color: #004494;
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .home-search .button {
+            width: 160px;
+            height: 46px;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+            background-image: linear-gradient(90deg, #00b3fc, #007cf8);
+            transition: all .2s ease-in-out;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        .home-search .button:hover {
+            opacity: .7;
+        }
+        
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 4px;
+            width: 60%;
+            max-width: 1000px;
+            margin-top: 24px;
+            padding-right: 10px;
+        }
+        
+        .input-control {
+            flex-grow: 2;
+            width: auto;
+            position: relative;
+            font-size: 14px;
+            display: inline-block;
+        }
+        
+        .input-inner {
+            height: 66px;
+            line-height: 66px;
+            border: none;
+            background-color: #fff;
+            background-image: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #606266;
+            display: inline-block;
+            font-size: inherit;
+            outline: 0;
+            padding: 0 15px;
+            width: 100%;
+        }
+        
+        .search_btn {
+            height: 46px;
+            line-height: 30px;
+            width: 160px;
+            font-size: 16px;
+            padding: 9px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            outline: 0;
+            text-align: center;
+            box-sizing: border-box;
+            background-image: linear-gradient(90deg, #00b3fc, #007cf8);
+            color: #fff;
+            transition: all .2s ease-in-out;
+        }
+        
+        .search_btn:hover {
+            opacity: .7;
+        }
+        
+        .feature-container {
+            width: 60%;
+            max-width: 1000px;
+            margin-top: 56px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .item-show {
+            height: 140px;
+            width: 220px;
+            overflow: hidden;
+            padding: 12px 24px;
+            background-color: #080e40;
+            background-position-x: 24px;
+            background-position-y: 80px;
+            box-sizing: border-box;
+        }
+        
+        .bg1 {
+            background: url('./img/block_a.png') no-repeat 0 100%;
+        }
+        
+        .bg2 {
+            background: url('./img/block_b.png') no-repeat 0 100%;
+        }
+        
+        .bg3 {
+            background: url('./img/block_c.png') no-repeat 0 100%;
+        }
+        
+        .item-show .info-head {
+            font-size: 12px;
+            color: #fff;
+            padding: 5px 0;
+            opacity: .8;
+        }
+        
+        .item-show .text {
+            color: #fff;
+            font-size: 30px;
+        }
+        
+        .home_footer {
+            color: rgba(255, 255, 255, .4);
+            text-align: center;
+        }
+        
+        .home_footer a {
+            color: rgba(255, 255, 255, .4);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="home-container">
+            <a href="#" class="home-login">
+                <img src="./img/logo_ema.png">
+            </a>
+            <div class="flex-y-layout">
+                <div class="feature flex-center">
+                    <h1>益码溯源链浏览器</h1>
+                    <h2>一物一码 防伪溯源 真实可靠</h2>
+                </div>
+                <div class="search-container">
+                    <div class="input-control">
+                        <input class="input-inner" type="text" placeholder="区块高度/交易哈希/地址">
+                    </div>
+                    <div class="search_btn">
+                        <span>查询</span>
+                    </div>
+                </div>
+                <div class="feature-container">
+                    <div class="item-show bg1">
+                        <p class="info-head">区块高度</p>
+                        <p class="text">#2406048</p>
+                    </div>
+                    <div class="item-show bg2">
+                        <p class="info-head">交易数量</p>
+                        <p class="text">2406048</p>
+                    </div>
+                    <div class="item-show bg3">
+                        <p class="info-head">记账节点</p>
+                        <p class="text">8</p>
+                    </div>
+                </div>
+            </div>
+            <div class="home_footer">
+                益码溯源链 版权所有©
+                <a href="#">京ICP备18214509号-2</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

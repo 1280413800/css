@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            margin: 50px 50%;
+        }
+        
+        .triangle {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-top: 10px solid #333;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+        
+        .triangle-line {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #333;
+            border-right: 2px solid #333;
+            transform: rotate(135deg)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="triangle"></div>
+        <div class="triangle-line"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="https://lib.baomitu.com/Swiper/4.4.6/css/swiper.min.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://lib.baomitu.com/Swiper/3.4.2/js/swiper.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        /*
+        隐藏右侧滚动条
+        */
+        /* html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+        }
+        
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+        
+        body {
+            margin: 0;
+        } */
+        
+        #topNav {
+            width: 100%;
+            overflow: hidden;
+            font: 16px/40px hiragino sans gb, microsoft yahei, simsun;
+            border-bottom: 1px solid #f8f8f8;
+            background-color: #efeff4;
+            z-index: 100;
+        }
+        
+        #topNav .swiper-slide {
+            width: calc(100% - 5.43rem);
+            letter-spacing: 2px;
+            text-align: center;
+            float: left;
+        }
+        
+        #topNav .swiper-slide span {
+            transition: all .3s ease;
+            display: block;
+        }
+        
+        #topNav .active span {
+            color: #FF2D2D;
+        }
+        
+        .nav_content_wrap {
+            position: absolute;
+            top: .8rem;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        
+        .nav_content_item::-webkit-scrollbar {
+            width: 0;
+        }
+        
+        .nav_content_item {
+            box-sizing: border-box;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .nav_content_item>li {
+            list-style: none;
+            display: none;
+            padding: .2rem;
+            width: 100%;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .nav_content_item>li.on {
+            color: #19e;
+            text-decoration: none;
+            border-bottom: 1px solid #19e;
+        }
+        
+        .nav_content_item>li.current {
+            display: block;
+        }
+        
+        .a {
+            height: 200px;
+            background-color: #ccc;
+        }
+        
+        .content_container {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="a">
+
+        </div>
+
+        <div class="content_container">
+            <div id="topNav" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide active"><span>病因症状</span></div>
+                    <div class="swiper-slide"><span>治疗方法</span></div>
+                    <div class="swiper-slide"><span>专家团队</span></div>
+                    <div class="swiper-slide"><span>科普视频</span></div>
+                    <div class="swiper-slide"><span>科普知识</span></div>
+                    <div class="swiper-slide"><span>政策资讯</span></div>
+                    <div class="swiper-slide"><span>诊断标准</span></div>
+                    <div class="swiper-slide"><span>病症种类</span></div>
+                    <div class="swiper-slide"><span>发病人群</span></div>
+                    <div class="swiper-slide"><span>临床检查</span></div>
+                    <div class="swiper-slide"><span>用药指南</span></div>
+                    <div class="swiper-slide"><span>就诊指南</span></div>
+                    <div class="swiper-slide"><span>食疗预防</span></div>
+                    <div class="swiper-slide"><span>日常预防</span></div>
+                </div>
+            </div>
+
+            <div class="nav_content_wrap">
+                <ul class="nav_content_item">
+                    <li class="current">
+                        <div id="item1mobile">
+                            <div class="b_content">
+                                白内障病因<br />凡是各种原因如老化、遗传、局部营养障碍、免疫与代谢异常、外伤、中毒、辐射等，都能引起晶状体代谢紊乱，导致晶状体蛋白质变性而发生混浊,导致白内障。<br /><br />白内障症状<br />典型症状： 双侧性，但两眼发病可有先后。视力进行性减退，有时在光亮的背景下可以看到固定的黑点。由于晶体不同部位屈光力变化，可有多视，单眼复视，近视度增加。 </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="item2mobile">
+                            <div class="b_content">
+                                <strong>白内障药物治疗</strong><br /><br />白内障药物治疗没有确切的效果，目前国内外都处于探索研究阶段，一些早期白内障，用药以后病惰可能会减慢发展，视力也稍有提高，但这不一定是药物治疗的结 果，因为白内障的早期进展至成熟是一个较漫长的过程，它有可能自然停止在某一发展阶段而不至于严重影响视力。一些中期白内障患者，用药后视力和晶状体混浊 程度都未改善。近成熟期的白内障，药物治疗更无实际意义了。目前临床上常用的药物不下几十种，有眼药水或口服的中西药，但都没有确切的治疗效果。<br
+                                /><br /><strong>白内障手术治疗</strong><br /><br />1、白内障超声乳化术：<br /><br />为近年来国内外开展的新型白内障手术。此手术目前主要集中在我国比较先进的大中城市开展。使用超声波 将晶状体核粉碎使其呈乳糜状，然后连同皮质一起吸出，术毕保留晶状体后囊膜，可同时植入房型人工晶状体。老年性白内障发展到视力低于0.3、晶状体混浊在 未成熟期、中心核部比较软，适合做超声乳化手术。其优点是切口小，组织损伤少，手术时间短，视力恢复快。<br
+                                /><br />2.白内障囊外摘除术：<br /><br />与老式的囊外摘除术不同，它需在手术显微镜下操作，切口较囊内摘出术小，将混浊的晶状体核排出，吸出皮质，但留下晶状体后囊。后囊膜被保留，可同时植入后房型人工晶状体，术后可立即恢复视力功能。因此，白内障囊外摘出已成为目前白内障的常规手术方式。<br /><br />3.白内障囊内摘除术：<br /><br />是将混浊的晶状体完整地从眼内取出的一种手术。此手术需要较大的手术切口，因手术时晶状体囊一并被摘除，故不能同时植入后房型人工晶状体。<br
+                                /><br />白内障其他疗法<br /><br /><strong>预后：</strong><br /><br />1、思想上要重视，不要认为手术后就万事大吉，应加强观察，注意术眼有无疼痛，人工晶状体位置有无偏斜或脱位，眼前节有无炎症渗出，虹膜及瞳孔是否发生粘连等。术后每周去医院检查1次，包括视力、人工晶状体及眼底情况。1个月后遵医嘱，定期复查。<br /><br />2.术后3个月应避免剧烈运动，尤其是低头动作，避免过度劳累，防止感冒。<br
+                                /><br />3.术后1个月内每日数次清用激素及抗生素眼药，并且遵医嘱滴用作用较弱的扩瞳眼药，以防止瞳孔粘连。对长期满用激素类眼药者，应注意眼压情况，避免产生激素性青光眼。<br /><br />4.保持大便通畅，少吃刺激性食物，忌烟酒，多吃水果及蔬菜。<br /><br />5.术后3个月应到医院常规检查，并作屈光检查，有屈光变化者可验光配镜加以矫正。一般1个月后可正常工作和学习。 </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="item1mobile">
+                            <div class="b_content">
+                                白内障病因<br />凡是各种原因如老化、遗传、局部营养障碍、免疫与代谢异常、外伤、中毒、辐射等，都能引起晶状体代谢紊乱，导致晶状体蛋白质变性而发生混浊,导致白内障。<br /><br />白内障症状<br />典型症状： 双侧性，但两眼发病可有先后。视力进行性减退，有时在光亮的背景下可以看到固定的黑点。由于晶体不同部位屈光力变化，可有多视，单眼复视，近视度增加。 </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="item2mobile">
+                            <div class="b_content">
+                                <strong>白内障药物治疗</strong><br /><br />白内障药物治疗没有确切的效果，目前国内外都处于探索研究阶段，一些早期白内障，用药以后病惰可能会减慢发展，视力也稍有提高，但这不一定是药物治疗的结 果，因为白内障的早期进展至成熟是一个较漫长的过程，它有可能自然停止在某一发展阶段而不至于严重影响视力。一些中期白内障患者，用药后视力和晶状体混浊 程度都未改善。近成熟期的白内障，药物治疗更无实际意义了。目前临床上常用的药物不下几十种，有眼药水或口服的中西药，但都没有确切的治疗效果。<br
+                                /><br /><strong>白内障手术治疗</strong><br /><br />1、白内障超声乳化术：<br /><br />为近年来国内外开展的新型白内障手术。此手术目前主要集中在我国比较先进的大中城市开展。使用超声波 将晶状体核粉碎使其呈乳糜状，然后连同皮质一起吸出，术毕保留晶状体后囊膜，可同时植入房型人工晶状体。老年性白内障发展到视力低于0.3、晶状体混浊在 未成熟期、中心核部比较软，适合做超声乳化手术。其优点是切口小，组织损伤少，手术时间短，视力恢复快。<br
+                                /><br />2.白内障囊外摘除术：<br /><br />与老式的囊外摘除术不同，它需在手术显微镜下操作，切口较囊内摘出术小，将混浊的晶状体核排出，吸出皮质，但留下晶状体后囊。后囊膜被保留，可同时植入后房型人工晶状体，术后可立即恢复视力功能。因此，白内障囊外摘出已成为目前白内障的常规手术方式。<br /><br />3.白内障囊内摘除术：<br /><br />是将混浊的晶状体完整地从眼内取出的一种手术。此手术需要较大的手术切口，因手术时晶状体囊一并被摘除，故不能同时植入后房型人工晶状体。<br
+                                /><br />白内障其他疗法<br /><br /><strong>预后：</strong><br /><br />1、思想上要重视，不要认为手术后就万事大吉，应加强观察，注意术眼有无疼痛，人工晶状体位置有无偏斜或脱位，眼前节有无炎症渗出，虹膜及瞳孔是否发生粘连等。术后每周去医院检查1次，包括视力、人工晶状体及眼底情况。1个月后遵医嘱，定期复查。<br /><br />2.术后3个月应避免剧烈运动，尤其是低头动作，避免过度劳累，防止感冒。<br
+                                /><br />3.术后1个月内每日数次清用激素及抗生素眼药，并且遵医嘱滴用作用较弱的扩瞳眼药，以防止瞳孔粘连。对长期满用激素类眼药者，应注意眼压情况，避免产生激素性青光眼。<br /><br />4.保持大便通畅，少吃刺激性食物，忌烟酒，多吃水果及蔬菜。<br /><br />5.术后3个月应到医院常规检查，并作屈光检查，有屈光变化者可验光配镜加以矫正。一般1个月后可正常工作和学习。 </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="item1mobile">
+                            <div class="b_content">
+                                白内障病因<br />凡是各种原因如老化、遗传、局部营养障碍、免疫与代谢异常、外伤、中毒、辐射等，都能引起晶状体代谢紊乱，导致晶状体蛋白质变性而发生混浊,导致白内障。<br /><br />白内障症状<br />典型症状： 双侧性，但两眼发病可有先后。视力进行性减退，有时在光亮的背景下可以看到固定的黑点。由于晶体不同部位屈光力变化，可有多视，单眼复视，近视度增加。 </div>
+                        </div>
+                    </li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <script type="text/javascript">
+        window.onload =
+            function() {
+                var oDiv = document.getElementById("topNav"),
+                    H = 0,
+                    Y = oDiv
+                while (Y) {
+                    H += Y.offsetTop;
+                    Y = Y.offsetParent;
+                }
+                window.onscroll = function() {
+                    var s = document.body.scrollTop || document.documentElement.scrollTop
+                    if (s > H) {
+                        oDiv.style = "position:fixed;top:0;"
+                    } else {
+                        oDiv.style = ""
+                    }
+                }
+            }
+    </script>
+
+    <script>
+        //rem
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+            recalc();
+        })(document, window);
+    </script>
+
+    <script type="text/javascript">
+        var mySwiper = new Swiper('#topNav', {
+            freeMode: true,
+            freeModeMomentumRatio: 0.5,
+            slidesPerView: 'auto',
+        });
+
+        swiperWidth = mySwiper.container[0].clientWidth
+        maxTranslate = mySwiper.maxTranslate();
+        maxWidth = -maxTranslate + swiperWidth / 2
+        $(".swiper-container").on('touchstart', function(e) {
+            // e.preventDefault()
+        })
+        mySwiper.on('tap', function(swiper, e) {
+            // e.preventDefault()
+            slide = swiper.slides[swiper.clickedIndex]
+            slideLeft = slide.offsetLeft
+            slideWidth = slide.clientWidth
+            slideCenter = slideLeft + slideWidth / 2
+                // 被点击slide的中心点
+            mySwiper.setWrapperTransition(300)
+            if (slideCenter < swiperWidth / 2) {
+                mySwiper.setWrapperTranslate(0)
+            } else if (slideCenter > maxWidth) {
+                mySwiper.setWrapperTranslate(maxTranslate)
+            } else {
+                nowTlanslate = slideCenter - swiperWidth / 2
+                mySwiper.setWrapperTranslate(-nowTlanslate)
+            }
+
+            $("#topNav  .active").removeClass('active')
+            $("#topNav .swiper-slide").eq(swiper.clickedIndex).addClass('active')
+
+        })
+        $("#topNav .swiper-slide").click(function() {
+            var index = $(this).index()
+            $(".nav_content_item > li").hide()
+            $(".nav_content_item > li:eq(" + index + ")").show()
+        })
+    </script>
+</body>
+
+</html>
